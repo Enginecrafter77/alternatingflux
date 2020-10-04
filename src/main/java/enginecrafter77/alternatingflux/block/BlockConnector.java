@@ -1,13 +1,13 @@
-package antibluequirk.alternatingflux.block;
+package enginecrafter77.alternatingflux.block;
 
 import java.util.Collection;
 import java.util.HashSet;
 
-import antibluequirk.alternatingflux.AlternatingFlux;
 import blusunrize.immersiveengineering.api.IEProperties;
 import blusunrize.immersiveengineering.api.energy.wires.TileEntityImmersiveConnectable;
 import blusunrize.immersiveengineering.client.models.IOBJModelCallback;
 import blusunrize.immersiveengineering.common.blocks.ItemBlockIEBase;
+import enginecrafter77.alternatingflux.AlternatingFlux;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.Material;

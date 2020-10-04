@@ -1,4 +1,4 @@
-package antibluequirk.alternatingflux;
+package enginecrafter77.alternatingflux;
 
 import net.minecraftforge.common.config.Config;
 

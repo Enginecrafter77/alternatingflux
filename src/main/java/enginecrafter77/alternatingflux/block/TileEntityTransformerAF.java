@@ -1,4 +1,4 @@
-package antibluequirk.alternatingflux.block;
+package enginecrafter77.alternatingflux.block;
 
 import com.google.common.collect.ImmutableSet;
 import blusunrize.immersiveengineering.api.energy.wires.WireType;
@@ -6,23 +6,23 @@ import blusunrize.immersiveengineering.common.blocks.metal.TileEntityTransformer
 
 public class TileEntityTransformerAF extends TileEntityTransformerHV
 {
-    {
-        acceptableLowerWires = ImmutableSet.of(WireType.HV_CATEGORY);
-    }
-
-
-	//public WireType getSecondCable() { return super.getLimiter(1); }
+	public TileEntityTransformerAF()
+	{
+		this.acceptableLowerWires = ImmutableSet.of(WireType.HV_CATEGORY);
+	}
 	
 	@Override
 	protected boolean canTakeLV()
 	{
 		return false;
 	}
+	
 	@Override
 	protected boolean canTakeMV()
 	{
 		return false;
 	}
+	
 	@Override
 	protected boolean canTakeHV()
 	{
@@ -30,19 +30,21 @@ public class TileEntityTransformerAF extends TileEntityTransformerHV
 	}
 	
 	@Override
-	protected float getLowerOffset() {
+	protected float getLowerOffset()
+	{
 		return super.getHigherOffset();
 	}
 
 	@Override
-	protected float getHigherOffset() {
+	protected float getHigherOffset()
+	{
 		return .75F;
 	}
 
 	@Override
-    public String getHigherWiretype()
-    {
-        return "AF";
-    }
+	public String getHigherWiretype()
+	{
+		return "AF";
+	}
 
 }

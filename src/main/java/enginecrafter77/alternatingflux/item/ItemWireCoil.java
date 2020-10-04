@@ -1,9 +1,13 @@
-package antibluequirk.alternatingflux.item;
+package enginecrafter77.alternatingflux.item;
 
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntityEnergyMeter;
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntityFeedthrough;
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntityRedstoneBreaker;
 import blusunrize.immersiveengineering.common.items.IEItemInterfaces.IColouredItem;
+import enginecrafter77.alternatingflux.AlternatingFlux;
+import enginecrafter77.alternatingflux.block.TileEntityRelayAF;
+import enginecrafter77.alternatingflux.block.TileEntityTransformerAF;
+import enginecrafter77.alternatingflux.wire.AFWireType;
 import blusunrize.immersiveengineering.api.ApiUtils;
 import blusunrize.immersiveengineering.api.Lib;
 import blusunrize.immersiveengineering.api.energy.wires.IWireCoil;
@@ -27,11 +31,6 @@ import java.util.HashSet;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
-import antibluequirk.alternatingflux.AlternatingFlux;
-import antibluequirk.alternatingflux.block.TileEntityRelayAF;
-import antibluequirk.alternatingflux.block.TileEntityTransformerAF;
-import antibluequirk.alternatingflux.wire.AFWireType;
 
 public class ItemWireCoil extends Item implements IWireCoil, IColouredItem {
 	public final Collection<Class<? extends TileEntityImmersiveConnectable>> valid_connections;

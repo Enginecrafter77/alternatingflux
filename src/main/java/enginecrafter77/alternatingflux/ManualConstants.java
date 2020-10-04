@@ -1,4 +1,4 @@
-package antibluequirk.alternatingflux;
+package enginecrafter77.alternatingflux;
 
 import blusunrize.immersiveengineering.common.Config.Mapped;
 import net.minecraftforge.common.config.ConfigManager;

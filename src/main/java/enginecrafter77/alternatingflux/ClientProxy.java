@@ -1,10 +1,7 @@
-package antibluequirk.alternatingflux.client;
+package enginecrafter77.alternatingflux;
 
 import java.util.Locale;
 
-import antibluequirk.alternatingflux.AlternatingFlux;
-import antibluequirk.alternatingflux.CommonProxy;
-import antibluequirk.alternatingflux.ManualConstants;
 import blusunrize.immersiveengineering.api.ManualHelper;
 import blusunrize.immersiveengineering.api.energy.wires.WireApi;
 import blusunrize.immersiveengineering.client.IECustomStateMapper;
@@ -27,7 +24,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ClientProxy extends CommonProxy {
 	@Override
-	public void preInit() {
+	public void preInit()
+	{
 		super.preInit();
 		MinecraftForge.EVENT_BUS.register(this);
 		OBJLoader.INSTANCE.addDomain(AlternatingFlux.MODID);
@@ -35,24 +33,26 @@ public class ClientProxy extends CommonProxy {
 	}
 	
 	@Override
-	public void postInit() {
+	public void postInit()
+	{
 		super.postInit();
 		ManualConstants.refresh();
-		ManualInstance m = ManualHelper.getManual();
+		ManualInstance manual = ManualHelper.getManual();
 		
-		m.addEntry("alternatingflux", ManualHelper.CAT_ENERGY,
-				new ManualPages.Text(m, "alternatingflux0"),
-				new ManualPages.Crafting(m, "alternatingfluxWire", new ItemStack(AlternatingFlux.item_wire, 1, 0), new ItemStack(AlternatingFlux.item_coil, 1, 0)),
-				new ManualPages.Text(m, "alternatingflux1"),
-				new ManualPages.Crafting(m, "alternatingfluxRelay", new ItemStack(AlternatingFlux.block_conn, 1, 0)),
-				new ManualPages.Crafting(m, "alternatingfluxTransformer", new ItemStack(AlternatingFlux.block_conn, 1, 1)),
-				new ManualPages.Text(m, "alternatingflux2"),
-				new ManualPages.Text(m, "alternatingflux3")
+		manual.addEntry("alternatingflux", ManualHelper.CAT_ENERGY,
+				new ManualPages.Text(manual, "alternatingflux0"),
+				new ManualPages.Crafting(manual, "alternatingfluxWire", new ItemStack(AlternatingFlux.item_wire, 1, 0), new ItemStack(AlternatingFlux.item_coil, 1, 0)),
+				new ManualPages.Text(manual, "alternatingflux1"),
+				new ManualPages.Crafting(manual, "alternatingfluxRelay", new ItemStack(AlternatingFlux.block_conn, 1, 0)),
+				new ManualPages.Crafting(manual, "alternatingfluxTransformer", new ItemStack(AlternatingFlux.block_conn, 1, 1)),
+				new ManualPages.Text(manual, "alternatingflux2"),
+				new ManualPages.Text(manual, "alternatingflux3")
 		);
 	}
 	
 	@SubscribeEvent
-    public void registerTextures(TextureStitchEvent.Pre event){
+    public void registerTextures(TextureStitchEvent.Pre event)
+	{
         event.getMap().registerSprite(AlternatingFlux.TEX_PASSTHROUGH_AF);
     }
 	

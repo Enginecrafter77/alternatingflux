@@ -1,4 +1,4 @@
-package antibluequirk.alternatingflux.block;
+package enginecrafter77.alternatingflux.block;
 
 import java.util.Locale;
 
@@ -11,11 +11,20 @@ public enum BlockTypes_Connector implements IStringSerializable, BlockIEBase.IBl
 	TRANSFORMER_AF;
 
 	@Override
-	public String getName() { return this.toString().toLowerCase(Locale.ENGLISH); }
+	public String getName()
+	{
+		return this.toString().toLowerCase(Locale.ENGLISH);
+	}
 	
 	@Override
-	public int getMeta() { return ordinal(); }
+	public int getMeta()
+	{
+		return ordinal();
+	}
 	
 	@Override
-	public boolean listForCreative() { return true; }
+	public boolean listForCreative()
+	{
+		return true;
+	}
 }

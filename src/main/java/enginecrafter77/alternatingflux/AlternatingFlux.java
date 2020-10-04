@@ -1,10 +1,10 @@
-package antibluequirk.alternatingflux;
+package enginecrafter77.alternatingflux;
 
 import org.apache.logging.log4j.Logger;
 
-import antibluequirk.alternatingflux.block.BlockConnector;
-import antibluequirk.alternatingflux.item.ItemWireCoil;
 import blusunrize.immersiveengineering.ImmersiveEngineering;
+import enginecrafter77.alternatingflux.block.BlockConnector;
+import enginecrafter77.alternatingflux.item.ItemWireCoil;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -36,11 +36,12 @@ public class AlternatingFlux {
 	
 	public static ResourceLocation TEX_PASSTHROUGH_AF = new ResourceLocation(AlternatingFlux.MODID, "blocks/passthrough_af");
 	
-	@SidedProxy(clientSide = "antibluequirk.alternatingflux.client.ClientProxy", serverSide = "antibluequirk.alternatingflux.CommonProxy")
+	@SidedProxy(clientSide = "enginecrafter77.alternatingflux.ClientProxy", serverSide = "enginecrafter77.alternatingflux.CommonProxy")
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event)
+	{
 		logger = event.getModLog();
 		
 		// Initialize the creative tab
@@ -64,22 +65,26 @@ public class AlternatingFlux {
 	}
 	
 	@EventHandler
-	public void init(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event)
+	{
 		proxy.init();
 	}
 	
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
+	public void postInit(FMLPostInitializationEvent event)
+	{
 		proxy.postInit();
 	}
 	
 	@SubscribeEvent
-	public static void registerBlocks(RegistryEvent.Register<Block> event) {
+	public static void registerBlocks(RegistryEvent.Register<Block> event)
+	{
 		event.getRegistry().register(block_conn);
 	}
 	
 	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
+	public static void registerItems(RegistryEvent.Register<Item> event)
+	{
 		IForgeRegistry<Item> reg = event.getRegistry();
 		reg.register(AlternatingFlux.block_conn.getItemBlock());
 		reg.registerAll(item_coil, item_wire);

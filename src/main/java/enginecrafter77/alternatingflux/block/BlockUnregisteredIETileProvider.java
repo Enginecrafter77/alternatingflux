@@ -1,10 +1,10 @@
-package antibluequirk.alternatingflux.block;
+package enginecrafter77.alternatingflux.block;
 
-import antibluequirk.alternatingflux.AlternatingFlux;
 import blusunrize.immersiveengineering.common.IEContent;
 import blusunrize.immersiveengineering.common.blocks.BlockIEBase;
 import blusunrize.immersiveengineering.common.blocks.BlockIETileProvider;
 import blusunrize.immersiveengineering.common.blocks.ItemBlockIEBase;
+import enginecrafter77.alternatingflux.AlternatingFlux;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;

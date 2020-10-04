@@ -1,10 +1,9 @@
-package antibluequirk.alternatingflux.wire;
+package enginecrafter77.alternatingflux.wire;
 
-import antibluequirk.alternatingflux.AlternatingFluxConfig;
-
-import antibluequirk.alternatingflux.AlternatingFlux;
-import antibluequirk.alternatingflux.block.BlockTypes_Connector;
 import blusunrize.immersiveengineering.api.energy.wires.ImmersiveNetHandler.Connection;
+import enginecrafter77.alternatingflux.AlternatingFlux;
+import enginecrafter77.alternatingflux.AlternatingFluxConfig;
+import enginecrafter77.alternatingflux.block.BlockTypes_Connector;
 import blusunrize.immersiveengineering.api.energy.wires.WireApi;
 import blusunrize.immersiveengineering.api.energy.wires.WireType;
 import net.minecraft.block.state.IBlockState;
