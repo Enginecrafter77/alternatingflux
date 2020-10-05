@@ -1,0 +1,17 @@
+{
+	"type": "immersiveengineering:ingredient_shapeless",
+	"damage_tool": 1,
+	"result": {
+		"item": "alternatingflux:dust_sca",
+		"data": 0
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:glowstone_dust"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "dustElectrum"
+		}
+	]
+}

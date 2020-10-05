@@ -31,7 +31,7 @@ public class AlternatingFlux {
 	public static AlternatingFlux instance = new AlternatingFlux();
 	public static CreativeTabs creativeTab;
 	
-	public static Item item_conn, item_coil, item_wire;
+	public static Item item_conn, item_coil, dust_sca, ingot_sca, wire_sca, plate_sca;
 	public static BlockConnector block_conn;
 	
 	public static ResourceLocation TEX_PASSTHROUGH_AF = new ResourceLocation(AlternatingFlux.MODID, "blocks/passthrough_af");
@@ -57,23 +57,26 @@ public class AlternatingFlux {
 			};
 		}
 		
-		item_wire = new Item().setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "wire_constantan")).setTranslationKey("wire_constantan").setCreativeTab(creativeTab);
-		block_conn = new BlockConnector();
-		item_coil = new ItemWireCoil();
+		AlternatingFlux.dust_sca = new Item().setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "dust_sca")).setTranslationKey("dust_sca").setCreativeTab(creativeTab);
+		AlternatingFlux.ingot_sca = new Item().setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "ingot_sca")).setTranslationKey("ingot_sca").setCreativeTab(creativeTab);
+		AlternatingFlux.plate_sca = new Item().setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "plate_sca")).setTranslationKey("plate_sca").setCreativeTab(creativeTab);
+		AlternatingFlux.wire_sca = new Item().setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "wire_sca")).setTranslationKey("wire_sca").setCreativeTab(creativeTab);
+		AlternatingFlux.block_conn = new BlockConnector();
+		AlternatingFlux.item_coil = new ItemWireCoil();
 		
-		proxy.preInit();
+		AlternatingFlux.proxy.preInit();
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		proxy.init();
+		AlternatingFlux.proxy.init();
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		proxy.postInit();
+		AlternatingFlux.proxy.postInit();
 	}
 	
 	@SubscribeEvent
@@ -87,6 +90,6 @@ public class AlternatingFlux {
 	{
 		IForgeRegistry<Item> reg = event.getRegistry();
 		reg.register(AlternatingFlux.block_conn.getItemBlock());
-		reg.registerAll(item_coil, item_wire);
+		reg.registerAll(item_coil, dust_sca, ingot_sca, plate_sca, wire_sca);
 	}
 }

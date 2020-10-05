@@ -24,7 +24,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TileEntityRelayAF extends TileEntityImmersiveConnectable implements ITickable, IDirectionalTile, IBlockBounds, IOBJModelCallback<IBlockState> {	
+public class TileEntityConnectorAF extends TileEntityImmersiveConnectable implements ITickable, IDirectionalTile, IBlockBounds, IOBJModelCallback<IBlockState> {	
 	@SideOnly(Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 	
@@ -32,7 +32,7 @@ public class TileEntityRelayAF extends TileEntityImmersiveConnectable implements
 	
 	boolean initialized;
 
-	public TileEntityRelayAF()
+	public TileEntityConnectorAF()
 	{
 		this.facing = EnumFacing.DOWN;
 		this.initialized = true;

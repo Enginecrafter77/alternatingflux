@@ -1,0 +1,23 @@
+{
+	"type": "immersiveengineering:ingredient_shapeless",
+	"damage_tool": 1,
+	"result": {
+		"item": "alternatingflux:wire_sca",
+		"data": 0
+	},
+	"ingredients": [
+		{
+			"item": "alternatingflux:plate_sca"
+		},
+		[
+			{
+				"item": "immersiveengineering:tool",
+				"data": 1
+			},
+			{
+				"item": "minecraft:shears",
+				"data": 32767
+			}
+		]
+	]
+}

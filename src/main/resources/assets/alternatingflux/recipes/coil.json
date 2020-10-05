@@ -1,0 +1,23 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "alternatingflux:coil_sca",
+  "result": {
+    "item": "alternatingflux:coil_sca",
+    "data": 0,
+    "count": 4
+  },
+  "pattern": [
+    " I ",
+    "ISI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "alternatingflux:wire_sca"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickSteel"
+    }
+  }
+}

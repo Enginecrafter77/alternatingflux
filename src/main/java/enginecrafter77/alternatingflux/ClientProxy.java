@@ -40,13 +40,13 @@ public class ClientProxy extends CommonProxy {
 		ManualInstance manual = ManualHelper.getManual();
 		
 		manual.addEntry("alternatingflux", ManualHelper.CAT_ENERGY,
-				new ManualPages.Text(manual, "alternatingflux0"),
-				new ManualPages.Crafting(manual, "alternatingfluxWire", new ItemStack(AlternatingFlux.item_wire, 1, 0), new ItemStack(AlternatingFlux.item_coil, 1, 0)),
-				new ManualPages.Text(manual, "alternatingflux1"),
-				new ManualPages.Crafting(manual, "alternatingfluxRelay", new ItemStack(AlternatingFlux.block_conn, 1, 0)),
-				new ManualPages.Crafting(manual, "alternatingfluxTransformer", new ItemStack(AlternatingFlux.block_conn, 1, 1)),
-				new ManualPages.Text(manual, "alternatingflux2"),
-				new ManualPages.Text(manual, "alternatingflux3")
+				new ManualPages.Text(manual, "alternatingflux_page0"),
+				new ManualPages.Text(manual, "alternatingflux_page1"),
+				new ManualPages.Crafting(manual, "alternatingflux_wire", new ItemStack(AlternatingFlux.wire_sca, 1, 0), new ItemStack(AlternatingFlux.item_coil, 1, 0)),
+				new ManualPages.Text(manual, "alternatingflux_page2"),
+				new ManualPages.Crafting(manual, "alternatingflux_connector", new ItemStack(AlternatingFlux.block_conn, 1, 0)),
+				new ManualPages.Crafting(manual, "alternatingflux_transformer", new ItemStack(AlternatingFlux.block_conn, 1, 1)),
+				new ManualPages.Text(manual, "alternatingflux_page3")
 		);
 	}
 	
@@ -105,8 +105,11 @@ public class ClientProxy extends CommonProxy {
 		WireApi.registerConnectorForRender("transformer_af_left", new ResourceLocation("alternatingflux:block/connector/transformer_af_left.obj"), null);
 		WireApi.registerConnectorForRender("transformer_af_right", new ResourceLocation("alternatingflux:block/connector/transformer_af_right.obj"), null);
 		
+		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.dust_sca, 0, new ModelResourceLocation(AlternatingFlux.dust_sca.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.ingot_sca, 0, new ModelResourceLocation(AlternatingFlux.ingot_sca.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.plate_sca, 0, new ModelResourceLocation(AlternatingFlux.plate_sca.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.wire_sca, 0, new ModelResourceLocation(AlternatingFlux.wire_sca.getRegistryName(), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.item_coil, 0, new ModelResourceLocation(AlternatingFlux.item_coil.getRegistryName(), "inventory"));
-		ModelLoader.setCustomModelResourceLocation(AlternatingFlux.item_wire, 0, new ModelResourceLocation(AlternatingFlux.item_wire.getRegistryName(), "inventory"));
 		this.registerIEBlockModel(AlternatingFlux.block_conn);
 	}
 }

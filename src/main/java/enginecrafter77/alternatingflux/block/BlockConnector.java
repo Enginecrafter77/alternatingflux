@@ -104,9 +104,9 @@ public class BlockConnector extends BlockUnregisteredIETileProvider<BlockTypes_C
 	{
 		super.neighborChanged(state, world, pos, blockIn, fromPos);
 		TileEntity te = world.getTileEntity(pos);
-		if(te instanceof TileEntityRelayAF)
+		if(te instanceof TileEntityConnectorAF)
 		{
-			TileEntityRelayAF connector = (TileEntityRelayAF) te;
+			TileEntityConnectorAF connector = (TileEntityConnectorAF) te;
 			if(world.isAirBlock(pos.offset(connector.facing)))
 			{
 				this.dropBlockAsItem(connector.getWorld(), pos, world.getBlockState(pos), 0);
@@ -122,7 +122,7 @@ public class BlockConnector extends BlockUnregisteredIETileProvider<BlockTypes_C
 		switch(type)
 		{
 			case RELAY_AF:
-				return new TileEntityRelayAF();
+				return new TileEntityConnectorAF();
 			case TRANSFORMER_AF:
 				return new TileEntityTransformerAF();
 			default:

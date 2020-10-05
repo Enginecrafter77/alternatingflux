@@ -20,10 +20,6 @@ public class AlternatingFluxConfig {
 	})
 	@Config.LangKey("config.alternatingflux.wireLossRatio.name")
 	public static double wireLossRatio = 0.005;
-
-	@Config.Comment({"The RGB values for the color of the wire."})
-	@Config.LangKey("config.alternatingflux.wireColouration.name")
-	public static int wireColouration = 0xf6866c;
 	
 	@Config.Comment({"The maximum length of a single wire. ", "The loss penalty is applied for each of these lengths, so increasing this value increases the efficiency of the wire."})
 	@Config.LangKey("config.alternatingflux.wireLength.name")

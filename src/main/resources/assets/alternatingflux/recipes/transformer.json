@@ -19,13 +19,15 @@
       "data": 4
     },
     "C": {
-      "item": "#ingotConstantan"
+      "item": "alternatingflux:ingot_sca"
     },
     "I": {
-      "item": "#ingotIron"
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
     },
     "B": {
-      "item": "#hvCoil"
+      "item": "immersiveengineering:metal_decoration0",
+      "data": 2
     }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "type": "immersiveengineering:ingredient_shapeless",
+  "damage_tool": 1,
+  "result": {
+    "item": "alternatingflux:plate_sca",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "alternatingflux:ingot_sca"
+    },
+    {
+      "item": "immersiveengineering:tool",
+      "data": 0
+    }
+  ]
+}

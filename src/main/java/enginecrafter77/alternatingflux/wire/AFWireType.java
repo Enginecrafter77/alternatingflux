@@ -44,7 +44,7 @@ public class AFWireType extends WireType {
 	@Override
 	public int getColour(Connection connection)
 	{
-		return AlternatingFluxConfig.wireColouration;
+		return 0xFEFB9B;
 	}
 
 	@Override

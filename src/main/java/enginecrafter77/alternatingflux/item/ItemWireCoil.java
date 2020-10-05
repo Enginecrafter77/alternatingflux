@@ -5,7 +5,7 @@ import blusunrize.immersiveengineering.common.blocks.metal.TileEntityFeedthrough
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntityRedstoneBreaker;
 import blusunrize.immersiveengineering.common.items.IEItemInterfaces.IColouredItem;
 import enginecrafter77.alternatingflux.AlternatingFlux;
-import enginecrafter77.alternatingflux.block.TileEntityRelayAF;
+import enginecrafter77.alternatingflux.block.TileEntityConnectorAF;
 import enginecrafter77.alternatingflux.block.TileEntityTransformerAF;
 import enginecrafter77.alternatingflux.wire.AFWireType;
 import blusunrize.immersiveengineering.api.ApiUtils;
@@ -40,15 +40,15 @@ public class ItemWireCoil extends Item implements IWireCoil, IColouredItem {
 		super();
 		this.valid_connections = new HashSet<Class<? extends TileEntityImmersiveConnectable>>();
 		
-		this.valid_connections.add(TileEntityRelayAF.class);
+		this.valid_connections.add(TileEntityConnectorAF.class);
 		this.valid_connections.add(TileEntityTransformerAF.class);
 		this.valid_connections.add(TileEntityRedstoneBreaker.class);
 		this.valid_connections.add(TileEntityEnergyMeter.class);
 		this.valid_connections.add(TileEntityFeedthrough.class);
 		
-		this.setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "coil_constantan"));
+		this.setRegistryName(new ResourceLocation(AlternatingFlux.MODID, "coil_sca"));
 		this.setCreativeTab(AlternatingFlux.creativeTab);
-		this.setTranslationKey("coil_constantan");
+		this.setTranslationKey("coil_sca");
 	}
 
 	@Override
